@@ -11,7 +11,8 @@ name: Build and deploy a container to an Azure Web App
 
 env:
   AZURE_WEBAPP_NAME: angular-docker-devops-test   # set this to your application's name
-
+  REPO: https://github.com/villepasanen/automatisointi
+  
 on:
   push:
     branches:
@@ -85,7 +86,7 @@ jobs:
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
-        uses: azure/webapps-deploy@85270a1854658d167ab239bce43949edb336fa7c
+        uses: azure/webapps-deploy@789f6079-e2c0-4ef5-afb7-ab230f9d985f
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
