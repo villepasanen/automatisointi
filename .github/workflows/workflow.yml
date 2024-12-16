@@ -31,10 +31,13 @@ jobs:
         run: |
           npm install
           npm run build
+          npm test --watch=false --browsers=ChromeHeadless
       - uses: actions/upload-artifact@master
         with:
           name: webpack artifacts
           path: dist/angular-example-app/
+
+  
 
   build-docker:
     runs-on: ubuntu-latest
