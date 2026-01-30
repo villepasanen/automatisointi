@@ -1,3 +1,7 @@
+# CI/CD example
+ automated tests
+ Continuous deployment to azure cloud
+ 
 # AngularExampleApp
 
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.7.
